@@ -1,6 +1,7 @@
 from django.urls import path, include
-from myapp.views import index
+from myapp.views import index, contacts
 
 urlpatterns = [
-    path('', index),
+    path('hello', index),
+    path('contacts', contacts),
 ]
