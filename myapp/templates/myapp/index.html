@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+</head>
+<body>
+<h1>This is contacts template</h1>
+
+<h3>
+    {% for item in items %}
+    Name: {{item.name}} | Price: {{item.price}} | Description: {{item.description}}
+    {% endfor %}
+</h3>
+</body>
+</html>
