@@ -9,5 +9,9 @@ def index(request):
     }
     return render(request, "myapp/index.html", context)
 
+
+def index_item(request, my_id):
+    return HttpResponse('Your item id is: ' + str(my_id))
+
 def contacts(request):
     return render(request, 'myapp/contacts.html')
