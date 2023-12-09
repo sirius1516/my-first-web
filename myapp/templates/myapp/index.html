@@ -9,7 +9,7 @@
 
 <h3>
     {% for item in items %}
-    <a href="{% url 'detail' item.id %}">
+    <a href="{% url 'myapp:detail' item.id %}">
     ID: {{item.id}} |
     Name: {{item.name}} |
     Price: {{item.price}} |
