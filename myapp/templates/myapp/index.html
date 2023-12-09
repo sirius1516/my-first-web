@@ -9,10 +9,12 @@
 
 <h3>
     {% for item in items %}
+    <a href="{% url 'detail' item.id %}">
     ID: {{item.id}} |
     Name: {{item.name}} |
     Price: {{item.price}} |
     Description: {{item.description}} </br>
+    </a>
     {% endfor %}
 </h3>
 </body>
