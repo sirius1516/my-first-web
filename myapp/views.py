@@ -17,7 +17,3 @@ def index_item(request, my_id):
         'item': item
     }
     return render(request, 'detail.html', context)
-
-
-def contacts(request):
-    return render(request, 'myapp/contacts.html')
