@@ -6,8 +6,17 @@
     <title>Contacts</title>
     <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
 </head>
-<body class="bg-sky-500">
-<h1>This is contacts template</h1>
+<body>
+<nav>
+    <div>
+        <div>
+            <div class="flex">
+                <img class="h-8 w-8" src="{% static 'myapp/images/store.png' %}" alt="logo"/>
+                <span class="text-xl">Pro Shop</span>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <h3>
     {% for item in items %}
