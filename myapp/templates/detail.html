@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+{% extends "myapp/base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Detail</title>
 </head>
 <body>
+{% block content %}
 <h3>This is detail page for: {{item.name}}</h3>
+{% endblock content %}
 </body>
 </html>
