@@ -1,7 +1,7 @@
 from django.urls import path, include
 from myapp.views import index, index_item
-from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = "myapp"
 

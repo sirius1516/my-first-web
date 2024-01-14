@@ -16,4 +16,4 @@ def index_item(request, my_id):
     context = {
         'item': item
     }
-    return render(request, 'detail.html', context)
+    return render(request, 'myapp/detail.html', context)
