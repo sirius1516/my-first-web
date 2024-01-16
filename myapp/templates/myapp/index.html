@@ -1,16 +1,18 @@
 {% extends "myapp/base.html" %}
 
 {% block content %}
-
-<h3>
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-3">    
     {% for item in items %}
-    <a href="{% url 'myapp:detail' item.id %}">
-    ID: {{item.id}} |
-    Name: {{item.name}} |
-    Price: {{item.price}} |
-    Description: {{item.description}} </br>
-        <img src="{{item.image.url}}">
-    </a>
+        <a href="{% url 'myapp:detail' item.id %}">
+            <div class="rounded overflow-hidden shadow-lg"> 
+                <img class="w-full" src="{{item.image.url}}">
+                <div class="px-6 py-4">
+                    <p class="font-bold text-xl mb-2">{{item.name}}</p>
+                    <p class="font-bold text-xl text-green-500 mb-2">$ {{item.price}}</p>
+                    <p class="text-gray-700 textbase">{{item.description}}</p>
+                </div>
+            </div>
+        </a>
     {% endfor %}
-</h3>
+</div>
 {% endblock content %}
