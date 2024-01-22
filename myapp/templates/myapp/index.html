@@ -1,6 +1,15 @@
 {% extends "myapp/base.html" %}
 
 {% block content %}
+<main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <div class="sm:text-center lg:text-left">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline">Exlusive goods</span>
+            <span class="block xl:inline text-green-500">with exlusive prices</span>
+        </h1>
+    </div>
+</main>
+
 <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-3">    
     {% for item in items %}
         <a href="{% url 'myapp:detail' item.id %}">
@@ -9,7 +18,7 @@
                 <div class="px-6 py-4">
                     <p class="font-bold text-xl mb-2">{{item.name}}</p>
                     <p class="font-bold text-xl text-green-500 mb-2">$ {{item.price}}</p>
-                    <p class="text-gray-700 textbase">{{item.description}}</p>
+                    <p class="text-gray-700 textbase ">{{item.description}}</p>
                 </div>
             </div>
         </a>
