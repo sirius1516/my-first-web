@@ -17,3 +17,7 @@ def index_item(request, my_id):
         'item': item
     }
     return render(request, 'myapp/detail.html', context)
+
+
+def add_item(request):
+    return render(request,'myapp/additem.html')
