@@ -19,7 +19,7 @@ def index_item(request, my_id):
     return render(request, 'myapp/detail.html', context)
 
 
-def add_item(request):
+def add_item(request) -> HttpResponse:
     if request.method == "POST":
         name = request.POST.get('name')
         price = request.POST.get('price')
