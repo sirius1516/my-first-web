@@ -27,4 +27,4 @@ def add_item(request) -> HttpResponse:
         image = request.FILES['upload']
         item = Product(name=name, price=price, description=description, image=image)
         item.save()
-    return render(request,'myapp/additem.html')
+    return render(request,'myapp/additem.html ')
