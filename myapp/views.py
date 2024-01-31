@@ -38,6 +38,6 @@ def update_item(request, my_id):
         item.description = request.POST.get('description')
         item.image = request.FILES.get('upload', item.image)
         item.save()
-        redirect("/myapp/")
+        return redirect("/myapp/")
     context = {'item': item}
     return render(request, "myapp/update_item.html", context)
