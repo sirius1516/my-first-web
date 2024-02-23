@@ -12,4 +12,3 @@ urlpatterns = [
     path("deleteitem/<int:my_id>", delete_item, name="delete_item"),
 ]
 
-
